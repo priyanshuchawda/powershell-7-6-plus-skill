@@ -1,21 +1,21 @@
-# PowerShell 7 Guidance Skill
+# PowerShell 7.6+ Skill
 
 This repo publishes one reusable `skills.sh` skill for modern Windows PowerShell guidance:
 
-- `powershell7-guidance` in `skills/powershell7-guidance/SKILL.md`
+- `powershell-7-6-plus` in `skills/powershell-7-6-plus/SKILL.md`
 
 ## Install from GitHub
 
 ```bash
-npx skills add priyanshuchawda/powershell7-guidance-skill --skill powershell7-guidance
+npx skills add priyanshuchawda/powershell-7-6-plus-skill --skill powershell-7-6-plus
 ```
 
 ## Test locally
 
 ```bash
 npx skills add . --list
-npx skills use . --skill powershell7-guidance
-npx skills add . --skill powershell7-guidance -y
+npx skills use . --skill powershell-7-6-plus
+npx skills add . --skill powershell-7-6-plus -y
 ```
 
 ## Notes

@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "skills": {
+    "powershell7-guidance": {
+      "source": "priyanshuchawda/powershell7-guidance-skill",
+      "sourceType": "github",
+      "skillPath": "skills/powershell7-guidance/SKILL.md",
+      "computedHash": "fbafe95ed1b0ac07033f3fb393e9b2e4379a5a502ac614c7e962d1532021117f"
+    }
+  }
+}
