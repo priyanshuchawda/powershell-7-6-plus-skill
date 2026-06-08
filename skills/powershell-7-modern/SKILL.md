@@ -1,9 +1,9 @@
 ---
-name: powershell-7-6-plus
-description: Use when writing, reviewing, debugging, explaining, or running PowerShell commands, .ps1 scripts, or Windows terminal automation; when targeting PowerShell 7 (`pwsh`) or Windows PowerShell 5.1 (`powershell.exe`); when translating Bash/Linux commands; or when quoting, paths, env vars, profiles, `$PROFILE`, `$PSHOME`, local `.\` execution, JSON, curl/web requests, native executables, `$PSNativeCommandArgumentPassing`, `$LASTEXITCODE`, remoting, WinRM, SSH remoting, WMI/CIM migration, install/update workflows, `PSScriptAnalyzer`, `Install-Module`, or `Install-PSResource` may differ by shell or PowerShell version.
+name: powershell-7-modern
+description: Use when writing, reviewing, debugging, explaining, or running PowerShell commands, .ps1 scripts, or Windows terminal automation; when targeting modern PowerShell 7 (`pwsh`) or Windows PowerShell 5.1 (`powershell.exe`); when translating Bash/Linux commands; or when quoting, paths, env vars, profiles, `$PROFILE`, `$PSHOME`, local `.\` execution, JSON, curl/web requests, native executables, `$PSNativeCommandArgumentPassing`, `$LASTEXITCODE`, remoting, WinRM, SSH remoting, WMI/CIM migration, install/update workflows, `PSScriptAnalyzer`, `Install-Module`, or `Install-PSResource` may differ by shell or PowerShell version.
 ---
 
-# PowerShell 7.6+ Guidance
+# Modern PowerShell 7 Guidance
 
 Use this skill for any Windows shell task that might be PowerShell-specific. Load it before giving commands, not after a command already failed.
 
