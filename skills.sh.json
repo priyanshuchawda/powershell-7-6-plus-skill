@@ -1,0 +1,13 @@
+{
+  "$schema": "https://skills.sh/schemas/skills.sh.schema.json",
+  "notGrouped": "bottom",
+  "groupings": [
+    {
+      "title": "Windows",
+      "description": "Skills for Windows shells and PowerShell workflows.",
+      "skills": [
+        "powershell7-guidance"
+      ]
+    }
+  ]
+}
