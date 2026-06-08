@@ -102,6 +102,8 @@ npm run build
 - Use `$LASTEXITCODE` for native executable exit codes.
 - Do not rely only on `$?` for native tools in mixed 5.1/7 guidance.
 - PowerShell does not run current-directory executables by bare name. Use `.\tool.exe`, `.\script.ps1`, `.\gradlew`, or `.\gradlew.bat`.
+- Use `Start-Process` when launching installers, opening files, or needing `-Verb RunAs` for elevation.
+- Do not fake elevation inside a normal shell. Clearly say when Administrator PowerShell is required.
 - For complex native quoting, prefer correct PowerShell quoting first. Use `--%` only as a Windows-only last resort.
 
 ## 7. Quoting and paths
@@ -152,6 +154,7 @@ $PSVersionTable
 $PSEdition
 $PSHOME
 Get-Command <name> -All
+$env:PSModulePath -split [IO.Path]::PathSeparator
 ```
 
 ## 11. Profiles, startup, and remoting
@@ -159,9 +162,14 @@ Get-Command <name> -All
 - PowerShell 7 profile paths differ from Windows PowerShell 5.1.
 - Use `$PROFILE | Select-Object *` to inspect startup profile paths.
 - Use `pwsh -NoProfile` to debug slow or broken startup.
+- For clean script runs, prefer `pwsh -NoProfile -File .\script.ps1`.
+- For temporary policy bypass on one run, prefer `pwsh -NoProfile -ExecutionPolicy Bypass -File .\script.ps1`.
+- Do not recommend changing `LocalMachine` execution policy for one script.
 - For Windows-to-Windows admin remoting, understand `WinRM` / `WSMan`.
 - For cross-platform remoting, PowerShell 7 supports SSH remoting.
 - Do not suggest `Enable-PSRemoting`, `Enter-PSSession`, `New-PSSession`, or `Invoke-Command` without mentioning setup, trust, and elevation requirements.
+- Do not use Bash-style backgrounding assumptions.
+- For PowerShell background work, use `Start-Job`, `Receive-Job`, and `Remove-Job`, or explain why a native tool should be run separately.
 
 ## 12. Safety rules
 
